@@ -1,0 +1,111 @@
+﻿@page
+@model escola.Pages.UnidadeModel
+@{
+}
+<section class="about-unit">
+    <div class="container">
+        <h1>Sobre a Unidade</h1>
+        <p>Situada dentro do Parque Olímpico do Rio de Janeiro em uma área de 1,1 milhão de metros quadrados. Foi palco principal das Olimpíadas – Rio 2016. A região estratégica próxima de grandes condomínios e shoppings, além de ser atendida pelas linhas do BRT e vias expressas Transcarioca e Linha Amarela.</p>
+        <p>Os estudantes do Colégio Alfa CEM contam com prédios adequados a todas as faixas etárias, salas de aula informatizadas e climatizadas, sala de multiatividades, sala do integral, sala do sono, biblioteca virtual, laboratórios, cantina, campos de futebol, ginásio Olímpico, quadra poliesportiva, refeitório, pátio com área, parquinho, areal, sistema de segurança profissional, circuito interno de TV e muito mais!</p>
+    </div>
+</section>
+<style>
+    .image-container {
+        text-align: center; /* Centraliza o conteúdo dentro do contêiner */
+    }
+
+        .image-container img {
+            max-width: 100%; /* Faz com que a imagem não ultrapasse a largura do contêiner */
+            height: auto; /* Mantém a proporção da imagem */
+        }
+
+
+    .about-unit {
+        background-color: #ffffff; /* Fundo branco */
+        padding: 40px 20px; /* Espaço ao redor do conteúdo */
+        text-align: center; /* Centraliza o texto */
+    }
+
+        .about-unit .container {
+            max-width: 800px; /* Largura máxima do contêiner */
+            margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+        }
+
+        .about-unit h1 {
+            font-size: 2.5em; /* Tamanho do título */
+            color: #0780f9; /* Cor do título */
+            margin-bottom: 20px; /* Espaço abaixo do título */
+        }
+
+        .about-unit p {
+            font-size: 1.125em; /* Tamanho da fonte do texto */
+            color: #666; /* Cor do texto */
+            line-height: 1.6; /* Altura da linha para melhorar a legibilidade */
+            margin-bottom: 20px; /* Espaço abaixo dos parágrafos */
+        }
+
+</style>
+
+
+<section class="image-gallery">
+    <img src="~/img/unidade1.webp" alt="Unidade 1" />
+    <img src="~/img/unidade2.webp" alt="Unidade 2" />
+    <img src="~/img/unidade3.webp" alt="Unidade 3" />
+    <img src="~/img/unidade4.webp" alt="Unidade 4" />
+    <img src="~/img/unidade5.webp" alt="Unidade 5" />
+    <img src="~/img/unidade6.webp" alt="Unidade 6" />
+</section>
+<style>
+    .image-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px; /* Espaço entre as imagens */
+        justify-content: center; /* Alinha as imagens no centro */
+        padding: 20px;
+        background-color: #f9f9f9; /* Fundo leve para destacar as imagens */
+    }
+
+        .image-gallery img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px; /* Arredondamento das bordas das imagens */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra leve nas imagens */
+            object-fit: cover; /* Garante que as imagens não sejam distorcidas */
+            width: calc(33.333% - 20px); /* Ajusta a largura das imagens com base no espaço disponível */
+        }
+
+
+        .image-gallery img {
+            width: calc(50% - 10px); /* 2 imagens por linha em telas menores */
+        }
+
+    }
+
+
+    .image-gallery img {
+        width: 100%; /* 1 imagem por linha em telas ainda menores */
+    }
+
+    }
+</style>
+
+<body>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/AaQCjLbwFtk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</body>
+
+<style>
+    .video-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Ajuste conforme necessário */
+    }
+
+    iframe {
+        width: 80%; /* Ajuste conforme necessário */
+        max-width: 800px; /* Ajuste conforme necessário */
+        height: 450px; /* Ajuste conforme necessário */
+    }
+</style>
