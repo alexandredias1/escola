@@ -1,28 +1,19 @@
-
-/* Estilo para os links de navegação */
-.nav-link {
-    color: #000000; /* Cor padrão do texto */
-    background-color: #e0e0e0; /* Cor de fundo padrão */
-    border: 2px solid #3366ff; /* Borda azul ao redor do botão */
-    border-radius: 8px; /* Bordas arredondadas */
-    padding: 10px 20px; /* Espaçamento interno dos botões */
-    margin: 0 10px; /* Espaçamento entre os botões */
-    text-align: center; /* Centraliza o texto */
-    text-decoration: none; /* Remove o sublinhado do texto */
-    display: inline-block; /* Permite o controle do tamanho e do alinhamento */
-    transition: all 0.3s ease; /* Transição suave para todas as mudanças */
+html {
+  font-size: 14px;
 }
 
-    .nav-link:hover, .nav-link:focus {
-        color: #ffffff; /* Cor do texto ao passar o mouse */
-        background-color: #3366ff; /* Cor de fundo ao passar o mouse */
-        border-color: #3366ff; /* Mantém a cor da borda ao passar o mouse */
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
-        transform: scale(1.05); /* Leve aumento no tamanho do botão */
-    }
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
 
-    /* Adiciona estilo ao foco do link */
-    .nav-link:focus {
-        outline: none; /* Remove o contorno padrão */
-        box-shadow: 0 0 0 4px rgba(51, 102, 255, 0.4); /* Adiciona uma sombra azul clara ao redor do botão */
-    }
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
