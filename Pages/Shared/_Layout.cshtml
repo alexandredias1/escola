@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Projeto_escola</title>
+    <title>@ViewData["Title"] - Alfa Cem</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Projeto_escola.styles.css" asp-append-version="true" />
@@ -12,7 +12,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Projeto_escola</a>
+                <a class="navbar-brand" asp-area="" asp-page="/Index">Alfa Cem</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -43,11 +43,22 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - Projeto_escola - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-    </footer>
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <p class="col-md-4 mb-0 text-body-secondary">&copy; 2024 Company, Inc</p>
+
+            <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap" /></svg>
+            </a>
+
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="Index" class="botao-footer">Home</a></li>
+                <li class="nav-item"><a href="Unidade" class="botao-footer">Unidades</a></li>
+                <li class="nav-item"><a href="SobreNos" class="botao-footer">Sobre Nós</a></li>
+                <li class="nav-item"><a href="contato" class="botao-footer">Contato</a></li>
+            </ul>
+        </footer>
+    </div>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

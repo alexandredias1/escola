@@ -14,6 +14,22 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background: rgb(4,68,212);
+    background: linear-gradient(90deg, rgba(0,51,102,1) 35%, rgba(7,128,249,1) 100%);
+    color:white;
+}
+.botao-footer {
+    color: #ffffff !important; /* Define o texto dos botões em branco */
+    margin-right: 15px; /* Espaçamento entre os botões */
+}
+
+    .botao-footer:last-child {
+        margin-right: 18; /* Remove o espaçamento do último botão */
+    }
+.py-5 {
+    border: 2px solid #ffffff; /* Borda branca */
+    padding: 20px; /* Espaçamento interno para evitar que o texto toque a borda */
+    border-radius: 10px; /* Bordas arredondadas (opcional) */
 }
 
