@@ -5,6 +5,7 @@
 }
 <style>
     /* Estilo para o carrossel */
+    /* Estilo para o carrossel */
     #carouselExampleCaptions {
         position: relative;
         width: 100%;
@@ -31,61 +32,67 @@
     /* Ajuste o tamanho dos botões de controle para melhor visibilidade */
     .carousel-control-prev, .carousel-control-next {
         width: 5%;
+        height: auto; /* Garante que a altura dos botões de controle se ajuste automaticamente */
     }
 
     /* Define a regra para todos os botões */
+    .botao-laembaixo::before {
+        content: '';
+        width: 0;
+        height: 3em;
+        border-radius: 30em;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(to right, #CC3333 0%, #ffffff 100%);
+        transition: .6s ease;
+        display: block;
+        z-index: -1;
+    }
 
+    .botao-laembaixo:hover::before {
+        width: 20em;
+        height: 5em;
+    }
 
-        .botao-laembaixo::before {
-            content: '';
-            width: 0;
-            height: 3em;
-            border-radius: 30em;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-image: linear-gradient(to right, #CC3333 0%, #ffffff 100%);
-            transition: .6s ease;
-            display: block;
-            z-index: -1;
-        }
+    #texto-botao {
+        font-size: 20px;
+    }
 
-        .botao-laembaixo:hover::before {
-            width: 20em;
-            height: 5em;
-        }
-        
-        #texto-botao{
-            font-size: 20px;
-        }
+    #display-botao {
+        display: flex;
+        justify-content: center;
+        gap: 150px;
+        flex-wrap: wrap; /* Adiciona wrap para permitir que os botões se movam para a linha seguinte em telas menores */
+    }
 
-        #display-botao{
-            display: flex;
-            justify-content: center;
-            gap: 150px;
-        }
+    .botao-laembaixo {
+        width: 20em;
+        height: 5em;
+        border-radius: 30em;
+        font-family: inherit;
+        border: none;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 1em; /* Ajusta o tamanho da fonte */
+    }
 
-        .botao-laembaixo{
-            width: 20em;
-            height: 5em;
-            border-radius: 30em;
-            font-family: inherit;
-            border: none;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-            box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
-            margin: 10px;
-        }
+    .featurette-image {
+        max-width: 100%;
+        height: auto; /* Mantém a proporção da imagem */
+    }
 
 </style>
 
 <div id="carouselExampleCaptions" class="carousel slide">
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
+
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img src="~/images/escola.png" />
@@ -116,56 +123,59 @@
 
 
 
-    <div class="row featurette">
-        <div class="col-md-7">
+<div class="row featurette">
+    <div class="col-md-7">
         <h2 class="featurette-heading fw-normal lh-1" A Importância do Ensino de LIBRAS nas Escolas <span class="text-body-secondary">Para um Futuro Inclusivo</span></h2>
         <p class="lead">Garantir que todas as escolas ofereçam ensino de LIBRAS é crucial para promover a inclusão e a acessibilidade no ambiente educacional. A Língua Brasileira de Sinais é essencial para a comunicação e a integração de estudantes surdos, permitindo-lhes participar plenamente das atividades escolares e interagir com seus colegas. Além disso, a inclusão de LIBRAS no currículo escolar enriquece a educação de todos os alunos, promovendo uma maior compreensão e respeito pela diversidade.</p>
-        </div>
-        <div class="col-md-5">
+    </div>
+    <div class="col-md-5">
         <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="images/bilingue.webp" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em"></text></img>
-        </div>
     </div>
+</div>
 
-    <hr class="featurette-divider">
+<hr class="featurette-divider">
 
-    <div class="row featurette">
-        <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-body-secondary">See for yourself.</span></h2>
-            <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
-        </div>
-        <div class="col-md-5 order-md-1">
-        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="images/conhecimento.webp " role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em"></text></svg>
-        </div>
+<div class="row featurette">
+    <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1">Conhecimento Escolar: Um Olhar Aprofundado <span class="text-body-secondary">Veja por si mesmo.</span></h2>
+        <p class="lead">O conhecimento escolar vai além da simples acumulação de fatos; ele é essencial para o desenvolvimento intelectual e social dos alunos. Através da educação formal, os estudantes adquirem habilidades críticas e criativas que os preparam para enfrentar desafios e contribuir para a sociedade. Veja como essa base sólida pode impactar a vida dos alunos.</p>
     </div>
+    <div class="col-md-5 order-md-1">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="images/conhecimento.webp" alt="Conhecimento Escolar" role="img">
+    </div>
+</div>
 
-    <hr class="featurette-divider">
 
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span class="text-body-secondary">Checkmate.</span></h2>
-            <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
-        </div>
-        <div class="col-md-5">
-        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"  src="images/infraestruturaescolar.webp" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em"></text></img>
-        </div>
+<hr class="featurette-divider">
+
+<div class="row featurette">
+    <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">Infraestrutura Escolar da Alpha Cem <span class="text-body-secondary">Descubra o diferencial.</span></h2>
+        <p class="lead">A Alpha Cem se destaca pela sua infraestrutura escolar moderna e bem equipada. Nossas instalações são projetadas para proporcionar um ambiente de aprendizado confortável e estimulante, com recursos tecnológicos avançados, salas de aula espaçosas e áreas de convivência que promovem o desenvolvimento integral dos alunos. Explore como nossa infraestrutura contribui para uma experiência educacional de alta qualidade.</p>
+    </div>
+    <div class="col-md-5">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="images/infraestruturaescolar.webp" alt="Infraestrutura Escolar da Alpha Cem" role="img">
+    </div>
+</div>
+
 </div>
 <br>
 <div class="button-container" id="display-botao">
-            <div class="nav-item">
-                <a class="nav-link text-dark" href="/Unidade">
-                    <button class="botao-laembaixo">
-                        Unidades
-                    </button>
-                </a>
-            </div>
-            <div class="nav-item">
-                <a class="nav-link text-dark" href="/Contato">
-                    <button class="botao-laembaixo">
-                        Contato
-                    </button>
-                </a>
-            </div>
+    <div class="nav-item">
+        <a class="nav-link text-dark" href="/Unidade">
+            <button class="botao-laembaixo">
+                Unidades
+            </button>
+        </a>
+    </div>
+    <div class="nav-item">
+        <a class="nav-link text-dark" href="/Contato">
+            <button class="botao-laembaixo">
+                Contato
+            </button>
+        </a>
+    </div>
 
-            
- </div>
+
+</div>
 
