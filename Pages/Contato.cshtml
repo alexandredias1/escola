@@ -2,115 +2,126 @@
 @model escola.Pages.contatoModel
 @{
 }
-<div class="flex-box container-box">
-    <div class="contact-form" aling="center">
-        <span class="heading">Fale conosco</span>
-        <form>
-            <label for="nome">Nome:</label>
-            <input type="text" required="">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required="">
-            <label for="Mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="Mensagem" required=""></textarea>
-            <button type="submit">Enviar</button>
+<div class="center-container">
+    <div class="form-container">
+        <form class="form">
+            <div class="form-group">
+                <label for="email"> Email</label>
+                <input type="text" id="email" name="email" required="">
+            </div>
+            <div class="form-group">
+                <label for="textarea">Como podemos-lhe ajudar?</label>
+                <textarea name="textarea" id="textarea" rows="10" cols="50" required="">          </textarea>
+            </div>
+            <button class="form-submit-btn" type="submit">Enviar</button>
         </form>
     </div>
 </div>
-<br>
-
-
 
 <style>
-    img{
-        max-width: 850px;
-        max-height: 550px;
-        width: auto;
-        max-width: 100%;
-    }
-
-    body{
-        background: rgb(4,68,212);
-        background: linear-gradient(90deg, rgba(0,51,102,1) 35%, rgba(7,128,249,1) 100%);
-    }
-    .container-form {
-        background-color: #F2F2F2;
-    }
-
-    .flex-box {
+    .center-container {
         display: flex;
-        align-items: center;
         justify-content: center;
-    }
-
-    .container-box {
-        height: 100%;
-    }
-
-    div {
         align-items: center;
-        width: 100%;
+        height: 100vh; /* This ensures that the container takes the full height of the viewport */
     }
 
-    .contact-form {
-        background-color: #f2f2f2;
-        padding: 20px;
-        border-radius: 10px;
+    .form-container {
+        width: 600px; /* Increased width */
+        background: linear-gradient(#212121, #212121) padding-box, linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+        border: 2px solid transparent;
+        padding: 100px 50px; /* Increased padding for larger form */
+        font-size: 16px; /* Increased font size */
+        font-family: inherit;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 24px; /* Increased gap between elements */
+        box-sizing: border-box;
+        border-radius: 16px;
     }
 
-        .contact-form label {
-            color: black;
+        .form-container button:active {
+            scale: 0.95;
         }
 
-        .contact-form .heading {
-            font-size: 35px;
-            color: black;
-            margin-bottom: 12px;
-            font-weight: bold;
-            display: block;
-        }
-
-        .contact-form form {
+        .form-container .form {
             display: flex;
             flex-direction: column;
+            gap: 24px; /* Increased gap between form elements */
         }
 
-        .contact-form label {
-            margin-bottom: 10px;
+        .form-container .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 4px; /* Increased gap between label and input/textarea */
         }
 
-    textarea {
-        resize: none;
-        height: 80px;
-        width: 200px;
-    }
+            .form-container .form-group label {
+                display: block;
+                margin-bottom: 8px; /* Increased margin-bottom */
+                color: #717171;
+                font-weight: 600;
+                font-size: 14px; /* Increased font size */
+            }
 
-    .contact-form input, .contact-form textarea {
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        margin-bottom: 20px;
-    }
+            .form-container .form-group input {
+                width: 100%;
+                padding: 14px 18px; /* Increased padding */
+                border-radius: 8px;
+                color: #fff;
+                font-family: inherit;
+                background-color: transparent;
+                border: 1px solid #414141;
+            }
 
-        .contact-form input:focus, .contact-form textarea:focus {
-            outline: none;
-            box-shadow: 0 0 5px #CC3333;
-            transform: scale(1.05);
-            transition: transform 0.3s ease-in-out;
+            .form-container .form-group textarea {
+                width: 100%;
+                padding: 14px 18px; /* Increased padding */
+                border-radius: 8px;
+                resize: none;
+                color: #fff;
+                height: 120px; /* Increased height */
+                border: 1px solid #414141;
+                background-color: transparent;
+                font-family: inherit;
+            }
+
+            .form-container .form-group input::placeholder {
+                opacity: 0.5;
+            }
+
+            .form-container .form-group input:focus {
+                outline: none;
+                border-color: #e81cff;
+            }
+
+            .form-container .form-group textarea:focus {
+                outline: none;
+                border-color: #e81cff;
+            }
+
+        .form-container .form-submit-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-self: flex-start;
+            font-family: inherit;
+            color: #717171;
+            font-weight: 600;
+            width: 50%; /* Adjusted width */
+            background: #313131;
+            border: 1px solid #414141;
+            padding: 14px 18px; /* Increased padding */
+            font-size: 16px; /* Increased font size */
+            gap: 8px;
+            margin-top: 12px; /* Increased margin-top */
+            cursor: pointer;
+            border-radius: 6px;
         }
 
-    .contact-form button[type="submit"] {
-        background-color: #CC3333;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-    }
-
-        .contact-form button[type="submit"]:hover {
-            transform: scale(1.1);
-            transition: transform 0.3s ease-in-out;
-        }
-
+            .form-container .form-submit-btn:hover {
+                background-color: #fff;
+                border-color: #fff;
+            }
 </style>
