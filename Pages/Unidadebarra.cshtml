@@ -1,0 +1,137 @@
+﻿@page
+@model escola.Pages.UnidadebarraModel
+@{
+}
+<body>
+    <div class="centered-image">
+        <img src="~/images/unidade arena.webp" alt="Descrição da Imagem">
+    </div>
+
+    <section class="about-unit">
+        <div class="container">
+            <h1>Sobre a Unidade</h1>
+            <p>Situada dentro do Parque Olímpico do Rio de Janeiro em uma área de 1,1 milhão de metros quadrados. Foi palco principal das Olimpíadas – Rio 2016. A região estratégica próxima de grandes condomínios e shoppings, além de ser atendida pelas linhas do BRT e vias expressas Transcarioca e Linha Amarela.</p>
+            <p>Os estudantes do Colégio Alfa CEM contam com prédios adequados a todas as faixas etárias, salas de aula informatizadas e climatizadas, sala de multiatividades, sala do integral, sala do sono, biblioteca virtual, laboratórios, cantina, campos de futebol, ginásio Olímpico, quadra poliesportiva, refeitório, pátio com área, parquinho, areal, sistema de segurança profissional, circuito interno de TV e muito mais!</p>
+        </div>
+    </section>
+
+    <section class="image-gallery">
+        <img src="~/images/unidade1.webp" alt="Unidade 1" />
+        <img src="~/images/unidade2.webp" alt="Unidade 2" />
+        <img src="~/images/unidade3.webp" alt="Unidade 3" />
+        <img src="~/images/unidade4.webp" alt="Unidade 4" />
+        <img src="~/images/unidade5.webp" alt="Unidade 5" />
+        <img src="~/images/unidade6.webp" alt="Unidade 6" />
+    </section>
+
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/AaQCjLbwFtk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.3194289787975!2d-43.39326452377632!3d-22.975278440324196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bdbe653ec25b5%3A0xf632c5971ff3b209!2sCol%C3%A9gio%20Alfa%20CEM%20Bil%C3%ADngue%20%E2%80%94%20Unidade%20Arena%20Ol%C3%ADmpica*21!5e0!3m2!1spt-PT!2sbr!4v1725490134096!5m2!1spt-PT!2sbr">
+    </iframe>
+</body>
+
+<style>
+    .centered-image {
+        max-width: 100%; /* Ajusta a largura da imagem ao contêiner */
+        height: auto; /* Mantém a proporção da imagem */
+        border-radius: 8px; /* Adiciona bordas arredondadas (opcional) */
+        display: flex; /* Usado para centralizar a imagem */
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+    }
+
+    .img decoding {
+        display: flex;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+        height: 100vh; /* Ocupa toda a altura da viewport */
+    }
+
+    .img decoding {
+        max-width: 100%; /* Ajusta a largura da imagem ao contêiner */
+        height: auto; /* Mantém a proporção da imagem */
+        border-radius: 8px; /* Opcional: adiciona bordas arredondadas */
+    }
+
+    .image-container {
+        text-align: center; /* Centraliza o conteúdo dentro do contêiner */
+    }
+
+        .image-container img {
+            max-width: 100%; /* Faz com que a imagem não ultrapasse a largura do contêiner */
+            height: auto; /* Mantém a proporção da imagem */
+        }
+
+    .about-unit {
+        background-color: linear-gradient(90deg, rgba(0, 51, 102, 1) 35%, rgba(7, 128, 249, 1) 100%);
+        padding: 40px 20px; /* Espaço ao redor do conteúdo */
+        text-align: center; /* Centraliza o texto */
+    }
+
+        .about-unit .container {
+            max-width: 800px; /* Largura máxima do contêiner */
+            margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+        }
+
+        .about-unit h1 {
+            font-size: 2.5em; /* Tamanho do título */
+            color: white; /* Cor do título */
+            margin-bottom: 20px; /* Espaço abaixo do título */
+        }
+
+        .about-unit p {
+            font-size: 1.125em; /* Tamanho da fonte do texto */
+            color: white; /* Cor do texto */
+            line-height: 1.6; /* Altura da linha para melhorar a legibilidade */
+            margin-bottom: 20px; /* Espaço abaixo dos parágrafos */
+        }
+
+    .image-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px; /* Espaço entre as imagens */
+        justify-content: center; /* Alinha as imagens no centro */
+        padding: 20px;
+        background-color: linear-gradient(90deg, rgba(0, 51, 102, 1) 35%, rgba(7, 128, 249, 1) 100%); /* Fundo leve para destacar as imagens */
+    }
+
+        .image-gallery img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px; /* Arredondamento das bordas das imagens */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra leve nas imagens */
+            object-fit: cover; /* Garante que as imagens não sejam distorcidas */
+            width: calc(33.333% - 20px); /* Ajusta a largura das imagens com base no espaço disponível */
+        }
+
+
+        .image-gallery img {
+            width: calc(50% - 10px); /* 2 imagens por linha em telas menores */
+        }
+
+    }
+
+
+    .image-gallery img {
+        width: 100%; /* 1 imagem por linha em telas ainda menores */
+    }
+
+    .video-container {
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Ajuste conforme necessário */
+        display: flex;
+        justify-content: center;
+        gap: 150px;
+    }
+
+    iframe {
+        width: 80%; /* Ajusta a largura conforme necessário */
+        max-width: 800px; /* Largura máxima do iframe */
+        height: 450px; /* Altura do iframe */
+        border: none; /* Remove a borda padrão */
+        justify-content: center;
+    }
+</style>
